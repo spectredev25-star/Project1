@@ -1,11 +1,11 @@
 'use server'
-console.log("Profile update action started");
 
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
 
-export async function saveProfile(formData: FormData) {
+console.log("Profile update action started");
 
+export async function saveProfile(formData: FormData) {
   const supabase = await createClient();
 
   const {
@@ -27,26 +27,27 @@ export async function saveProfile(formData: FormData) {
   const preferred_country = formData.get("preferred_country") as string;
 
   console.log("Current user:", user);
-  console.log("User ID:", user?.id);
+  console.log("User ID:", user.id);
+
   const { error } = await supabase
-  .from("Profiles")
-  .upsert(
-    {
-      user_id: user.id,
-      full_name,
-      university,
-      department,
-      faculty,
-      level,
-      cgpa,
-      country,
-      preferred_country,
-      gender,
-    },
-    {
-      onConflict: "user_id",
-    }
-  );
+    .from("Profiles")
+    .upsert(
+      {
+        user_id: user.id,
+        full_name,
+        university,
+        department,
+        faculty,
+        level,
+        cgpa,
+        country,
+        preferred_country,
+        gender,
+      },
+      {
+        onConflict: "user_id",
+      }
+    );
 
   if (error) {
     console.error(error);
