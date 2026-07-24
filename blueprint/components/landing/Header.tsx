@@ -9,15 +9,9 @@ export default function Header(){
                 <Link href = '/'>Schorlar MatchAI</Link>
             </div>
             <div>
-                <nav className='flex items-center gap-6'>
-                    <Link href='/'> 
-                    <Home className='float' color="#6366f1" size={24} strokeWidth={1.5} />
-                    Home
-                    </Link>
-                </nav>
             </div>
             <div>
-                <ThemeToggle />
+            <ThemeToggle />
             <div className='hidden lg:flex'>
                 <Link href='/login'>
                 <button type="button" className='btn-primary p-2 float-right mr-8'>LOG IN</button>

@@ -1,35 +1,39 @@
-import Links from 'next/link'
+import Link from "next/link";
 
-export default function SideBar(){
-    return(
-        <section className="hidden lg:fixed left-0 top-0 pt-32 pl-4 sidebar flex  align-middle h-screen">
-            <nav>
-                <p><Links href='/'>
-                Dashboard
-                </Links>
-                </p>
-                <p><Links href='/'>
-                Scholarships
-                </Links>
-                </p>
-                <p><Links href='/'>
-                Applications
-                </Links>
-                </p>
-                <p><Links href='/profile_update'>
-                Profile
-                </Links>
-                </p>
-                <p><Links href='/'>
-                Settings
-                </Links>
-                </p>
-                <Links href='/'>
-                <button>Log Out</button>
-                </Links>
+type SidebarProps = {
+  className?: string;
+};
 
-            </nav>
+export default function SideBar({ className = "" }: SidebarProps) {
+  return (
+    <section
+      className={`left-0 top-0 pt-32 pl-4 sidebar align-middle h-screen ${className}`}
+    >
+      <nav className="flex flex-col gap-4">
+        <div>
+          <Link href="/">Dashboard</Link>
+        </div>
 
-        </section>
-    )
+        <div>
+          <Link href="/">Scholarships</Link>
+        </div>
+
+        <div>
+          <Link href="/">Applications</Link>
+        </div>
+
+        <div>
+          <Link href="/profile_update">Profile</Link>
+        </div>
+
+        <div>
+          <Link href="/">Settings</Link>
+        </div>
+
+        <Link href="/">
+          <button>Log Out</button>
+        </Link>
+      </nav>
+    </section>
+  );
 }

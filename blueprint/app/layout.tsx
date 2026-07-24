@@ -5,6 +5,7 @@ import "./globals.css";
 import { Inter, Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/Provider/theme-provider";
 
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",

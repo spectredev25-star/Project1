@@ -1,12 +1,10 @@
 import Link from 'next/link';
 export default function Footer(){
     return(
-        <section className="flex justify-center items-center">
-            <div>
-                <p><Link href='/'>About</Link></p>
-                <p><Link href='/'>Contact</Link></p>
-                <p><Link href='/'>Privacy Policy</Link></p>
-            </div>
+        <section className="flex justify-center items-center gap-2">
+                <div><Link href='/'>About</Link></div>
+                <div><Link href='/'>Contact</Link></div>
+                <div><Link href='/'>Privacy Policy</Link></div>
         </section>
     )
 }

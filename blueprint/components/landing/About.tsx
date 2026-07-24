@@ -4,7 +4,7 @@ import { CircleUser, ScanSearch, GraduationCap} from 'lucide-react';
 
 export default function About(){
     return(
-        <section className='mt-32 mb-10'>
+        <section className='mt-32 mb-10 p-4'>
             <div className='flex justify-center items-center mb-6'>
                 <h1 className='relative'>How Scholar MatchAI Works?</h1>
             </div>

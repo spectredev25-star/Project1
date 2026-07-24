@@ -18,11 +18,11 @@ export async function login(formData: FormData) {
     password,
   })
   if (error) {
-    redirect('/login?error=Could not authenticate user')
+    redirect("/login?error=Invalid Email or Password. Please try again.");
   }
 
   revalidatePath('/', 'layout')
   
   // Send the authenticated user to your main layout landing or workspace dashboard
-  redirect('/Dashboard_home') 
+  redirect("/Dashboard_home?message=You have successfully logged in.");
 }

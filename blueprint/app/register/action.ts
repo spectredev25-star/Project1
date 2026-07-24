@@ -22,11 +22,11 @@ export async function signup(formData: FormData) {
   })
 
   if (error) {
-    redirect('/register?error=Could not create account')
+     redirect("/register?error=Could not create account");
   }
 
   revalidatePath('/', 'layout')
-  redirect('/Dasshboard_home') 
+  redirect('/Dasshboard_home?message=Account created successfully'); 
 
  
 }

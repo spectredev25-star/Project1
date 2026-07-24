@@ -1,4 +1,5 @@
 import Strands from './Strands';
+import Link from 'next/link';
 
 export default function Homepage() {
   return (
@@ -27,11 +28,19 @@ export default function Homepage() {
     
 />
 </div>
-        <div className='absolute items-center flex inset-0 justify-center'>
-        <h2 className='ml-4'>Find Scholarships That Actually Match You.</h2>
+        <div className='p-4 absolute items-center block inset-0 justify-center lg:flex'>
+        <h2 className='ml-4 mt-22 lg:mt-0'>Find Scholarships That Actually Match You.</h2>
         <p className='relative mt-32'>Scholar MatchAI analyzes your academic profile, preferred country <br/>
         and eligibility to recommend scholarships you are most likely to qualify for.
         </p>
+        <div className='flex mt-4 lg:hidden'>
+                <Link href='/login'>
+                <button type="button" className='btn-primary p-2 float-right mr-8'>LOG IN</button>
+                </Link> 
+                 <Link href='/register'>
+                <button type="button" className='btn-primary p-2 float-right'>SIGN UP</button>
+                </Link>
+            </div>  
       </div>
 
     </section>
