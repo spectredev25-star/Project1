@@ -1,20 +1,30 @@
-'use server'
+import { forgotPassword } from "./action";
 
-import { createClient } from "@/utils/supabase/server";
-import { redirect } from "next/navigation";
+export default function ResetPasswordPage() {
+  return (
+    <main className="flex min-h-screen items-center justify-center">
+      <form action={forgotPassword} className="space-y-4 w-full max-w-md">
 
-export async function updatePassword(formData: FormData) {
-  const supabase = await createClient();
+        <h1 className="text-2xl font-bold">
+          Reset Password
+        </h1>
 
-  const password = formData.get("password") as string;
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your new password"
+          required
+          className="w-full rounded border p-3"
+        />
 
-  const { error } = await supabase.auth.updateUser({
-    password,
-  });
+        <button
+          type="submit"
+          className="w-full rounded bg-blue-600 p-3 text-white"
+        >
+          Update Password
+        </button>
 
-  if (error) {
-    throw new Error(error.message);
-  }
-
-  redirect("/login");
+      </form>
+    </main>
+  );
 }
