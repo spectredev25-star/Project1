@@ -19,7 +19,6 @@ export default function ThemeToggle() {
       }
       className="size={16} float-end"
     >
-      {/* Condition swapped: Show Sun in Light Mode, Moon in Dark Mode */}
       {!mounted ? (
         <span className="inline-block w-6 h-6" />
       ) : theme === "light" ? (

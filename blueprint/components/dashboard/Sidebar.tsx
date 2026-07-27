@@ -30,7 +30,7 @@ export default function SideBar({ className = "" }: SidebarProps) {
           <Link href="/">Settings</Link>
         </div>
 
-        <Link href="/">
+        <Link href="/login">
           <button>Log Out</button>
         </Link>
       </nav>

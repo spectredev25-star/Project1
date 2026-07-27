@@ -1,119 +1,128 @@
-
+import { createClient } from "@/utils/supabase/server";
+import { redirect } from "next/navigation";
 import { saveProfile } from "./action";
-import SubmitButton from "@/components/ui/submit_button";
 
-interface PageProps {
-  searchParams: Promise<{
-    error?: string;
-    message?: string;
-  }>;
-}
+export default async function Profile() {
+  const supabase = await createClient();
 
-export default async function Profile({ searchParams }: PageProps) {
-  const { error, message } = await searchParams;
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect("/login");
+  }
+
+  const { data: profile } = await supabase
+    .from("Profiles")
+    .select("*")
+    .eq("user_id", user.id)
+    .single();
 
   return (
     <section className="flex flex-col w-full justify-center items-center">
-      <div className="flex w-full justify-center items-center">
-        <h1>Profile Info</h1>
+      <div className="flex w-full justify-center items-center mb-6">
+        <h1 className="text-2xl font-bold">Profile Information</h1>
       </div>
 
-      <form action={saveProfile}>
-        {message && (
-          <div className="mb-4 rounded-lg border border-green-300 bg-green-100 p-3 text-green-700">
-            {message}
-          </div>
-        )}
+      <form action={saveProfile} className="w-full max-w-xl space-y-5">
 
-        {error && (
-          <div className="mb-4 rounded-lg border border-red-300 bg-red-100 p-3 text-red-700">
-            {error}
-          </div>
-        )}
-
-        <div className="info-edit-box">
-          <p>Full Name:</p>
+        <div>
+          <p>Full Name</p>
           <input
             type="text"
             name="full_name"
+            defaultValue={profile?.full_name ?? ""}
             placeholder="John Doe"
-            required
+            className="w-full border rounded-lg p-3"
           />
         </div>
 
         <div>
-          <p>University:</p>
+          <p>University</p>
           <input
             type="text"
             name="university"
-            placeholder="Federal University, Lokoja"
+            defaultValue={profile?.university ?? ""}
+            placeholder="Federal University Lokoja"
+            className="w-full border rounded-lg p-3"
           />
         </div>
 
         <div>
-          <p>Department:</p>
-          <input
-            type="text"
-            name="department"
-            placeholder="Computer Engineering"
-          />
-        </div>
-
-        <div>
-          <p>CGPA:</p>
-          <input
-            type="number"
-            name="cgpa"
-            placeholder="4.00"
-          />
-        </div>
-
-        <div>
-          <p>Country of Residence:</p>
-          <input
-            type="text"
-            name="country"
-            placeholder="Nigeria"
-          />
-        </div>
-
-        <div>
-          <p>Preferred Country:</p>
-          <input
-            type="text"
-            name="preferred_country"
-            placeholder="USA"
-          />
-        </div>
-
-        <div>
-          <p>Level:</p>
-          <input
-            type="text"
-            name="level"
-            placeholder="400"
-          />
-        </div>
-
-        <div>
-          <p>Faculty:</p>
+          <p>Faculty</p>
           <input
             type="text"
             name="faculty"
+            defaultValue={profile?.faculty ?? ""}
             placeholder="Engineering"
+            className="w-full border rounded-lg p-3"
           />
         </div>
 
         <div>
-          <p>Gender:</p>
+          <p>Department</p>
           <input
             type="text"
-            name="gender"
-            placeholder="Male"
+            name="department"
+            defaultValue={profile?.department ?? ""}
+            placeholder="Computer Engineering"
+            className="w-full border rounded-lg p-3"
           />
         </div>
 
-        <SubmitButton idleText="Save Changes" loadingText="Saving..." />
+        <div>
+          <p>Level</p>
+          <input
+            type="number"
+            name="level"
+            defaultValue={profile?.level ?? ""}
+            placeholder="400"
+            className="w-full border rounded-lg p-3"
+          />
+        </div>
+
+        <div>
+          <p>CGPA</p>
+          <input
+            type="number"
+            step="0.01"
+            name="cgpa"
+            defaultValue={profile?.cgpa ?? ""}
+            placeholder="4.50"
+            className="w-full border rounded-lg p-3"
+          />
+        </div>
+
+        <div>
+          <p>Country of Residence</p>
+          <input
+            type="text"
+            name="country"
+            defaultValue={profile?.country ?? ""}
+            placeholder="Nigeria"
+            className="w-full border rounded-lg p-3"
+          />
+        </div>
+
+        <div>
+          <p>Preferred Country of Study</p>
+          <input
+            type="text"
+            name="preferred_country"
+            defaultValue={profile?.preferred_country ?? ""}
+            placeholder="Canada"
+            className="w-full border rounded-lg p-3"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+        >
+          Save Changes
+        </button>
+
       </form>
     </section>
   );

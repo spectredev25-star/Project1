@@ -8,8 +8,6 @@ export function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  // Overrides the injected script's type on the client side 
-  // to trick React 19 into ignoring the script tag warning.
   const scriptProps = typeof window === "undefined" 
     ? undefined 
     : { type: "application/json" };

@@ -1,0 +1,185 @@
+import { Scholarship } from "./type";
+
+export const mockScholarships: Scholarship[] = [
+  {
+    id: "daad-001",
+    title: "DAAD Masters Scholarship",
+    provider: "DAAD",
+    description:
+      "Fully funded Master's scholarship for international students in Germany.",
+    application_url: "https://www.daad.de",
+    image_url: "/scholarships/daad.png",
+    country: "Germany",
+    university: "Any DAAD Partner University",
+    funding_type: "Fully Funded",
+    degree_level: ["Masters"],
+    eligible_countries: ["Nigeria", "Ghana", "Kenya"],
+    eligible_faculties: ["Engineering", "Science"],
+    eligible_departments: [
+      "Computer Engineering",
+      "Mechanical Engineering",
+      "Electrical Engineering",
+    ],
+    minimum_cgpa: 3.5,
+    minimum_level: 400,
+    language_requirements: [
+      {
+        exam: "IELTS",
+        minimum_score: 6.5,
+      },
+    ],
+    benefits: [
+      "Full Tuition",
+      "Monthly Stipend",
+      "Health Insurance",
+      "Travel Allowance",
+    ],
+    required_documents: [
+      "Transcript",
+      "CV",
+      "Passport",
+      "Recommendation Letter",
+    ],
+    tags: ["Engineering", "Germany", "Masters"],
+    deadline: "2027-02-15",
+  },
+
+  {
+    id: "chevening-001",
+    title: "Chevening Scholarship",
+    provider: "UK Government",
+    description:
+      "Fully funded scholarship to pursue a one-year Master's degree in the UK.",
+    application_url: "https://www.chevening.org",
+    image_url: "/scholarships/chevening.png",
+    country: "United Kingdom",
+    university: "Any UK University",
+    funding_type: "Fully Funded",
+    degree_level: ["Masters"],
+    eligible_countries: ["Nigeria"],
+    eligible_faculties: [],
+    eligible_departments: [],
+    minimum_cgpa: 3.2,
+    minimum_level: 400,
+    language_requirements: [],
+    benefits: [
+      "Tuition",
+      "Monthly Stipend",
+      "Travel Costs",
+    ],
+    required_documents: [
+      "Transcript",
+      "CV",
+      "Passport",
+    ],
+    tags: ["Leadership", "UK"],
+    deadline: "2027-11-05",
+  },
+
+  {
+    id: "mext-001",
+    title: "MEXT Scholarship",
+    provider: "Government of Japan",
+    description:
+      "Japanese Government Scholarship for international students.",
+    application_url: "https://www.studyinjapan.go.jp",
+    image_url: "/scholarships/mext.png",
+    country: "Japan",
+    university: "Japanese Universities",
+    funding_type: "Fully Funded",
+    degree_level: ["Masters", "PhD"],
+    eligible_countries: ["Nigeria", "Ghana"],
+    eligible_faculties: ["Engineering", "Science"],
+    eligible_departments: [
+      "Computer Engineering",
+      "Civil Engineering",
+    ],
+    minimum_cgpa: 3.0,
+    minimum_level: 300,
+    language_requirements: [],
+    benefits: [
+      "Tuition",
+      "Accommodation",
+      "Monthly Stipend",
+    ],
+    required_documents: [
+      "Transcript",
+      "Medical Certificate",
+    ],
+    tags: ["Japan", "Research"],
+    deadline: "2027-05-20",
+  },
+
+  {
+    id: "erasmus-001",
+    title: "Erasmus Mundus Scholarship",
+    provider: "European Union",
+    description:
+      "Study across multiple European universities with full funding.",
+    application_url: "https://erasmus-plus.ec.europa.eu",
+    image_url: "/scholarships/erasmus.png",
+    country: "Multiple",
+    university: "Partner Universities",
+    funding_type: "Fully Funded",
+    degree_level: ["Masters"],
+    eligible_countries: ["Nigeria", "Kenya", "India"],
+    eligible_faculties: ["Engineering", "Science"],
+    eligible_departments: [],
+    minimum_cgpa: 3.3,
+    minimum_level: 400,
+    language_requirements: [
+      {
+        exam: "IELTS",
+        minimum_score: 6.5,
+      },
+    ],
+    benefits: [
+      "Tuition",
+      "Travel",
+      "Monthly Allowance",
+    ],
+    required_documents: [
+      "Transcript",
+      "Passport",
+      "Motivation Letter",
+    ],
+    tags: ["Europe", "Exchange"],
+    deadline: "2027-01-31",
+  },
+
+  {
+    id: "vanier-001",
+    title: "Vanier Canada Graduate Scholarship",
+    provider: "Government of Canada",
+    description:
+      "Prestigious scholarship for doctoral students in Canada.",
+    application_url: "https://vanier.gc.ca",
+    image_url: "/scholarships/vanier.png",
+    country: "Canada",
+    university: "Canadian Universities",
+    funding_type: "Fully Funded",
+    degree_level: ["PhD"],
+    eligible_countries: ["Nigeria", "Canada"],
+    eligible_faculties: ["Engineering", "Science"],
+    eligible_departments: [],
+    minimum_cgpa: 3.8,
+    minimum_level: 400,
+    language_requirements: [
+      {
+        exam: "IELTS",
+        minimum_score: 7,
+      },
+    ],
+    benefits: [
+      "Research Funding",
+      "Living Allowance",
+    ],
+    required_documents: [
+      "Research Proposal",
+      "Transcript",
+      "CV",
+    ],
+    tags: ["Canada", "PhD"],
+    deadline: "2027-10-01",
+  },
+];

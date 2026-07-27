@@ -48,7 +48,7 @@ export default async function LoginPage({ searchParams }: PageProps) {
       />
       </div>
       <div className='mt-4'>
-        <Link href='/' className='underline mt-4'>
+        <Link href='/forgot_password' className='underline mt-4'>
         Forgot Password?
         </Link>
       </div>

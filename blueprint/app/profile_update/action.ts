@@ -26,33 +26,27 @@ export async function saveProfile(formData: FormData) {
   const gender = formData.get("gender") as string;
   const preferred_country = formData.get("preferred_country") as string;
 
-  console.log("Current user:", user);
-  console.log("User ID:", user.id);
+  //console.log("Current user:", user);
+  //console.log("User ID:", user.id);
 
-  const { error } = await supabase
-    .from("Profiles")
-    .upsert(
-      {
-        user_id: user.id,
-        full_name,
-        university,
-        department,
-        faculty,
-        level,
-        cgpa,
-        country,
-        preferred_country,
-        gender,
-      },
-      {
-        onConflict: "user_id",
-      }
-    );
+ const { error } = await supabase
+  .from("Profiles")
+  .update({
+    full_name,
+    university,
+    faculty,
+    department,
+    level,
+    cgpa,
+    country,
+    preferred_country,
+  })
+  .eq("user_id", user.id);
 
   if (error) {
-    console.error(error);
+    redirect("/profile_update?error=profile-update-failed");
     return;
   }
 
-  redirect("/Dashboard_home?message=Profile updated successfully.");
+  redirect("/Dashboard_home?success=profile-updated");
 }
