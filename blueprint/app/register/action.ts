@@ -11,7 +11,10 @@ export async function signup(formData: FormData) {
   const email = formData.get('email') as string
   const password = formData.get('password') as string
 
-  const { error } = await supabase.auth.signUp({
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.signUp({
     email,
     password,
     options: {
@@ -23,6 +26,27 @@ export async function signup(formData: FormData) {
 
   if (error) {
     redirect('/register?error=Could not create account')
+  }
+
+  // Create profile for new user
+  if (user) {
+    const { error: profileError } = await supabase
+      .from('Profiles')
+      .insert({
+        user_id: user.id,
+        full_name: fullName,
+        university: '',
+        faculty: '',
+        department: '',
+        level: null,
+        cgpa: null,
+        country: '',
+        preferred_country: '',
+      })
+
+    if (profileError) {
+      console.error('Profile creation failed:', profileError)
+    }
   }
 
   revalidatePath('/', 'layout')
