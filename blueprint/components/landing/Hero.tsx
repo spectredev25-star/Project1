@@ -1,4 +1,4 @@
-import Strands from './Strands';
+import Strands from '../hero/Strands';
 import Link from 'next/link';
 
 export default function Homepage() {

@@ -1,4 +1,4 @@
-import Strands from './Strands';
+import Strands from '../hero/Strands';
 
 export default function Match_prev(){
     return(

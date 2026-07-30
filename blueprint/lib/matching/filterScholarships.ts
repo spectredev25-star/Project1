@@ -39,9 +39,6 @@ export function filterScholarships(
       return false;
     }
 
-    // Don't filter by faculty or department.
-    // Let the scoring engine reward matches instead.
-
     return true;
   });
 }
