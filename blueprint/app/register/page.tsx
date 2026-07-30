@@ -23,7 +23,7 @@ export default async function RegisterPage({
         <div className="absolute z-10 text-center px-10">
 
           <h1 className="text-6xl font-bold text-white">
-            Blueprint
+            ScholarMatch AI
           </h1>
 
           <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-lg">
