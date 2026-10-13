@@ -2,7 +2,7 @@
 
 ### Personalized Scholarship Discovery & Matching Platform
 
-**Blueprint ScholarMatch AI** is a web application protothttps://github.com/spectredev25-star/Project1/edit/main/README.mdype designed to help students discover scholarship opportunities relevant to their academic profiles, educational backgrounds, and preferences.
+**Blueprint ScholarMatch AI** is a web application prototype designed to help students discover scholarship opportunities relevant to their academic profiles, educational backgrounds, and preferences.
 
 The project explores how structured student information and scholarship eligibility criteria can be used to make scholarship discovery more focused and efficient.
 
@@ -14,12 +14,11 @@ The project explores how structured student information and scholarship eligibil
 
 ## Project Preview
 
-![Blueprint ScholarMatch AI Dashboard](<img width="1815" height="874" alt="Screenshot (509)" src="[Screenshot(509).png](https://github.com/user-attachments/assets/1b341550-0a79-4414-a132-13c85e1a3afd)" />
-)
+![Blueprint ScholarMatch AI Dashboard](./assets/Screenshot(509).png)
 
 *Blueprint ScholarMatch AI — application dashboard preview.*
 
-**Live Demo:** [View the deployed application]([https://blueprint-livid-five.vercel.app/](https://project1-nine-rouge.vercel.app/))
+**Live Demo:** [View the deployed application](https://blueprint-livid-five.vercel.app/)
 
 ---
 
@@ -189,8 +188,8 @@ The long-term objective is to reduce the effort involved in discovering relevant
 
 Software Engineering · Data & Analytics · Engineering Systems
 
-- GitHub: [Your GitHub Profile](https://github.com/spectredev25-star)
-
+- GitHub: [Your GitHub Profile](https://github.com/YOUR_USERNAME)
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/YOUR_USERNAME/)
 
 ---
 
