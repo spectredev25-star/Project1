@@ -188,8 +188,8 @@ The long-term objective is to reduce the effort involved in discovering relevant
 
 Software Engineering · Data & Analytics · Engineering Systems
 
-- GitHub: [Your GitHub Profile](https://github.com/YOUR_USERNAME)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/YOUR_USERNAME/)
+- GitHub: [Your GitHub Profile](https://github.com/spectredev25-star)
+
 
 ---
 
