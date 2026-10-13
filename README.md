@@ -2,7 +2,7 @@
 
 ### Personalized Scholarship Discovery & Matching Platform
 
-**Blueprint ScholarMatch AI** is a web application prototype designed to help students discover scholarship opportunities relevant to their academic profiles, educational backgrounds, and preferences.
+**Blueprint ScholarMatch AI** is a web application protothttps://github.com/spectredev25-star/Project1/edit/main/README.mdype designed to help students discover scholarship opportunities relevant to their academic profiles, educational backgrounds, and preferences.
 
 The project explores how structured student information and scholarship eligibility criteria can be used to make scholarship discovery more focused and efficient.
 
@@ -14,7 +14,7 @@ The project explores how structured student information and scholarship eligibil
 
 ## Project Preview
 
-![Blueprint ScholarMatch AI Dashboard](<img width="1815" height="874" alt="Screenshot (509)" src="https://github.com/user-attachments/assets/1b341550-0a79-4414-a132-13c85e1a3afd" />
+![Blueprint ScholarMatch AI Dashboard](<img width="1815" height="874" alt="Screenshot (509)" src="Screenshot(509).png" />
 )
 
 *Blueprint ScholarMatch AI — application dashboard preview.*
