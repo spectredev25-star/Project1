@@ -14,7 +14,7 @@ The project explores how structured student information and scholarship eligibil
 
 ## Project Preview
 
-![Blueprint ScholarMatch AI Dashboard](./assets/Screenshot(509).png)
+![Blueprint ScholarMatch AI Dashboard](./assest/Screenshot%20(509).png)
 
 *Blueprint ScholarMatch AI — application dashboard preview.*
 
